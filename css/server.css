@@ -138,12 +138,14 @@ body {
 }
 
 .goodBox {
-  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .goodBox .good {
-  width: 46%;
-  margin: 5px;
+  width: 43%;
+  margin: 10px;
   display: inline-block;
   border-radius: 5px;
   background-color: #FFFFFF;
