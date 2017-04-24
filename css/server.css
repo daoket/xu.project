@@ -85,7 +85,6 @@ th {
   text-align: left;
 }
 
-
 /*头部样式*/
 
 .header {
@@ -97,13 +96,14 @@ th {
   align-items: center;
 }
 
-.header .btn {
+.header .item {
   height: 45px;
   width: 130px;
   margin: 10px;
   color: #fff;
   font-size: 20px;
   cursor: pointer;
+  text-decoration: none;
   display: -webkit-flex;
   display: flex;
   -webkit-justify-content: center;
@@ -113,7 +113,7 @@ th {
   border-radius: 4px;
 }
 
-.header .btn span {
+.header .item span {
   margin: 0 4px;
   letter-spacing: 5px;
 }

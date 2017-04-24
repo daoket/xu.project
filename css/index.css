@@ -92,6 +92,46 @@ th {
   max-width: 600px;
 }
 
+/*头部样式*/
+
+.header {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.header .item {
+  height: 45px;
+  width: 130px;
+  margin: 10px;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.header .item span {
+  margin: 0 4px;
+  letter-spacing: 5px;
+}
+
+.header .cash {
+  background-color: #1AABF1;
+}
+
+.header .pay {
+  background-color: #FFA701;
+}
 
 /*普通重置*/
 
@@ -118,13 +158,13 @@ th {
   background-color: #EEEEEE;
 }
 
-.option .select .columns {
+.option .select{
   display: -webkit-flex;
   display: flex;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-align-items: center;
-  align-items: center;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .option .select .item {
@@ -147,7 +187,11 @@ th {
   border-color: #1AABF1;
 }
 
-
+.cardBox .cards div.active {
+  font-size: 14px;
+  color: #1AABF1;
+  border-color: #1AABF1;
+}
 /*充值卡*/
 
 .cardBox {
@@ -175,6 +219,7 @@ th {
   justify-content: space-around;
   -webkit-align-items: center;
   align-items: center;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 .cardBox .card .icon {
