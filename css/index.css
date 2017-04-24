@@ -259,6 +259,10 @@ th {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+.payment .money input:focus{
+  border-color: #1AABF1;
+}
+
 .payment .define {
   height: 45px;
   width: 140px;
@@ -272,7 +276,6 @@ th {
   background-color: #FFA701;
   -webkit-appearance: none;
   appearance: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 
