@@ -69,6 +69,16 @@
         <button class="define">确定支付</button>
       </div>
     </div>
+    <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript">
+	    var eventType = 'ontouchstart' in document.documentElement ? 'touchstart' : 'click';
+      $('.goodBox .good').on(eventType, select);
+      
+      // 选择函数
+      function select () {
+        $(this).addClass('active').siblings().removeClass('active');
+      }
+    </script>
 </body>
 </html>
 
