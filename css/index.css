@@ -1,0 +1,245 @@
+/*! minireset.css v0.0.2 | MIT License | github.com/jgthms/minireset.css */
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+*:before, *:after {
+  box-sizing: inherit;
+}
+
+img,
+embed,
+object,
+audio,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+  text-align: left;
+}
+
+/*页面样式*/
+.app{
+  max-width: 600px;
+}
+.header{
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.header .btn{
+  height: 45px;
+  width: 130px;
+  margin: 10px;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  border-radius: 4px;
+}
+.header .btn span{
+  margin: 0 4px;
+  letter-spacing: 5px;
+}
+.header .cash{
+  background-color: #1AABF1;
+}
+.header .pay{
+  background-color: #FFA701;
+}
+
+/*普通重置*/
+.option .title, .cardBox .title{
+  font-size: 22px;
+  font-weight: bold;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.option .title .line, .cardBox .title .line{
+  height: 1px;
+  width: 33%;
+  background-color: #EEEEEE;
+}
+.option .select .columns{
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.option .select .item{
+  height: 45px;
+  width: 130px;
+  margin: 10px;
+  cursor: pointer;
+  border: 1px solid #EEEEEE;
+  outline: none;
+  border-radius: 4px;
+  background-color: #FFFFFF;
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.option .select button.active{
+  font-size: 14px;
+  color: #1AABF1;
+  border-color: #1AABF1;
+}
+
+/*充值卡*/
+.cardBox{
+  font-size: 14px;
+}
+.cardBox .cards{
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.cardBox .card{
+  height: 100px;
+  width: 100px;
+  border: 1px solid #EEEEEE;
+  margin: 10px;
+  cursor: pointer;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.cardBox .card .icon{
+  width: 80px;
+  height: 80px;
+}
+
+/*支付金额*/
+ .payment{
+  margin-top: 40px;
+  text-align: center;
+ }
+ .payment .money{
+   font-size: 18px;
+   font-weight: bold;
+   margin: 10px;
+   display: -webkit-flex;
+   display: flex;
+   -webkit-justify-content: space-between;
+   justify-content: space-between;
+   -webkit-align-items: center;
+   align-items: center;
+ }
+ .payment .money input{
+   height: 40px;
+   width: 73%;
+   font-size: 18px;
+   outline: none;
+   text-indent: 5px;
+   border: 1px solid #EEEEEE;
+   -webkit-appearance: none;
+   appearance: none;
+   -webkit-tap-highlight-color: rgba(0,0,0,0);
+ }
+ .payment .define{
+    height: 45px;
+    width: 140px;
+    margin: 20px 10px;
+    cursor: pointer;
+    color: #FFFFFF;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background-color: #FFA701;
+    -webkit-appearance: none;
+    appearance: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+ }
+ 
+ /*图标字体*/
+.icon {
+   width: 16px; height: 16px;
+   vertical-align: -0.15em;
+   fill: currentColor;
+   overflow: hidden;
+}
