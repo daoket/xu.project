@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="aplus-terminal" content="1">
+  <meta name="apple-mobile-web-app-title" content="">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    
+    <meta name="format-detection" content="telephone=no, address=no">
+      
+  <title>注册</title>
+  <link rel="stylesheet" type="text/css" href="css/signup.css"/>
+</head>
+<body>
+  <div class="app">
+    <header>
+      <img src="img/logo.png"/>
+    </header>
+    <form id="signup" action="" method="post">
+    	<div class="form-group">
+    	  <label for="tell">手机号</label>
+    	  <input type="text" name="tell" id="tell" value="" placeholder="填写手机号码" />
+    	</div>
+    	<div class="form-group code">
+        <div class="codeMsg">
+          <label for="code">验证码</label>
+          <input type="text" name="code" id="code" value="" placeholder="6位验证码"/>
+        </div>
+        <span class="getCode">获取验证码</span>
+      </div>
+      <div class="form-group">
+        <label for="username">真实姓名</label>
+        <input type="text" name="username" id="username" value="" placeholder="输入真实姓名" />
+      </div>
+      <div class="form-group">
+        <label for="idcard">身份证</label>
+        <input type="text" name="idcard" id="idcard" value="" placeholder="输入身份证号码" />
+      </div>
+    	<input type="submit" class="submitBtn" value="提交"/>
+    </form>
+  </div>
+  <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/jquery-validate/1.15.1/jquery.validate.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#signup").validate({
+        rules: {
+          tell: {
+            required: true,
+            number: true,
+            minlength: 11,
+            maxlength: 11
+          },
+          username: {
+            required: true,
+            minlength: 1,
+            maxlength: 16
+          },
+          idcard: {
+            required: true,
+            minlength: 18,
+            maxlength: 18
+          }
+        },
+        messages: {
+          tell: {
+            required: "手机号不能为空",
+            number: '手机号不合法',
+            minlength: "手机号不合法"
+          },
+          username: {
+            required: "姓名不能为空",
+            minlength: "姓名长度不能少于1个字符",
+            maxlength: "姓名长度不能超过16个字符"
+          },
+          idcard: {
+            required: "身份证不能为空",
+            minlength: "身份证号码不合法",
+            maxlength: "身份证号码不合法"
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+

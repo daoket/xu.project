@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="aplus-terminal" content="1">
+  <meta name="apple-mobile-web-app-title" content="">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    
+    <meta name="format-detection" content="telephone=no, address=no">
+      
+  <title>注册</title>
+  <link rel="stylesheet" type="text/css" href="css/signin.css"/>
+</head>
+<body>
+  <div class="app">
+    <header>
+      <img src="img/logo.png"/>
+    </header>
+    <form id="signin" action="#" method="post">
+      <div class="form-group">
+        <label for="tell">手机号</label>
+        <input type="text" name="tell" id="tell" value="" placeholder="填写手机号码" />
+      </div>
+      <div class="form-group">
+        <label for="password">密码</label>
+        <input type="password" name="password" id="password" value="" placeholder="输入密码" />
+      </div>
+      <div class="btn-group">
+      	<input type="submit" class="btn signin" value="登录"/>
+        <a class="btn signup" href="signup.html">注册</a>
+      </div>
+    </form>
+  </div>
+  <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/jquery-validate/1.15.1/jquery.validate.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#signin").validate({
+        rules: {
+          tell: {
+            required: true,
+            number: true,
+            minlength: 11,
+            maxlength: 11
+          },
+          password: {
+            required: true,
+            minlength: 6,
+            maxlength: 16
+          }
+        },
+        messages: {
+          tell: {
+            required: "手机号不能为空",
+            number: '手机号不合法',
+            minlength: "手机号不合法"
+          },
+          password: {
+            required: "密码不能为空",
+            minlength: "密码长度不能少于6个字符",
+            maxlength: "密码长度不能超过16个字符"
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+
