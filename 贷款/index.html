@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="aplus-terminal" content="1">
+  <meta name="apple-mobile-web-app-title" content="">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    
+    <meta name="format-detection" content="telephone=no, address=no">
+      
+  <title>贷款</title>
+  <link rel="stylesheet" type="text/css" href="css/main.css"/>
+  <style type="text/css">
+    /*公用样式*/
+  	html, body{
+  	  height: 100%;
+  	  width: 100%;
+  	}
+  	.app{
+  	  height: 100%;
+  	  width: 100%;
+  	  position: relative;
+  	}
+  	.app .footer{
+  	  height: 60px;
+  	  width: 100%;
+  	  background-color: #2F0707;
+  	  position: absolute;
+  	  bottom: 0;
+  	  left: 0;
+  	  display: flex;
+  	  display: -webkit-flex;
+  	  justify-content: space-around;
+  	  -webkit-justify-content: space-around;
+  	  align-items: center;
+  	  -webkit-align-items: center;
+  	}
+  	.app .footer a{
+  	  height: 100%;
+  	  width: 25%;
+  	  color: #FFFFFF;
+  	  text-decoration: none;
+  	  font-size: 20px;
+  	  display: flex;
+  	  display: -webkit-flex;
+  	  justify-content: center;
+  	  -webkit-justify-content: center;
+  	  align-items: center;
+  	  -webkit-align-items: center;
+  	}
+  	.app .footer a.active{
+  	  color: #2F0707;
+  	  background: linear-gradient(to bottom, #F7E627, #EE692E);
+  	  background: -webkit-linear-gradient(to bottom, #F7E627, #EE692E);
+  	}
+  	.content{
+  	  display: none;
+  	}
+  	.content:target{
+  	  display: block;
+  	}
+  	/*content1样式*/
+	  .app .content1{
+      height: 100%;
+      width: 100%;
+      background: url(img/bg.png) no-repeat;
+      background-size: 100% 100%;
+    }
+    .app .content1 .qrcode{
+      width: 30%;
+      position: absolute;
+      left: 34%;
+      bottom: 25%;
+    }
+    /*content2 样式*/
+   .app .content2{
+     padding: 10px;
+   }
+   .app .content2 .search{
+     height: 40px;
+   }
+   .app .content2 .search select{
+     width: 20%;
+     height: 40px;
+     font-size: 16px;
+     border: 1px solid #EEEEEE;
+   }
+   .app .content2 .search input{
+     width: 70%;
+     height: 40px;
+     font-size: 16px;
+     text-indent: 10px;
+     outline: none;
+     border: 1px solid #EEEEEE;
+     appearance: none;
+     -webkit-appearance: none;
+     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+   }
+   .result{
+     margin-top: 10px;
+     border-bottom: 1px solid #EEEEEE;
+   }
+   .result li{
+     height: 40px;
+     cursor: pointer;
+     display: flex;
+     display: -webkit-flex;
+     justify-content: flex-start;
+     -webkit-justify-content: flex-start;
+     align-items: center;
+     -webkit-align-items: center;
+     border-top: 1px solid #EEEEEE;
+   }
+   /*content4样式*/
+  .content4{
+    position: relative;
+  }
+  .content4 .head{
+    height: 40px;
+  }
+  .content4 select{
+    height: 40px;
+    border: none;
+    outline: none;
+    width: 100px;
+    font-size: 16px;
+  }
+  .content4 .select1{
+    position: absolute;
+    left: 20%;
+  }
+  .content4 .select2{
+    position: absolute;
+    right: 20%;
+  }
+  .content4 .nav table{
+    width: 100%;
+  }
+  .content4 .nav table tr{
+    height: 40px;
+  }
+  .content4 .nav table tr:hover{
+     background-color: #EEEEEE;
+   }
+  .content4 .nav table th, .content4 .nav table td{
+    cursor: pointer;
+    text-align: center;
+  }
+  .content4 .nav .thead{
+    color: #FFFFFF;
+    background-color: #DB402A;
+  }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <div id="content1" class="content content1">
+      <img class="qrcode" src="img/qrcode.png"/>
+    </div>
+    <div id="content2" class="content content2">
+      <div class="search">
+        <select name="">
+          <option value="杭州市">杭州市</option>
+          <option value="杭州市">杭州市</option>
+          <option value="杭州市">杭州市</option>
+          <option value="杭州市">杭州市</option>
+        </select>
+        <input type="text" placeholder="搜索公司名称"/>
+      </div>
+      <ul class="result">
+      	<li>杭州xxx公司</li>
+      	<li>杭州xxx公司</li>
+      	<li>杭州xxx公司</li>
+      </ul>
+    </div>
+    <div id="content3" class="content content3">
+      content3
+    </div>
+    <div id="content4" class="content content4">
+      <div class="head">
+        <select class="select1" name="">
+          <option value="年榜">年榜</option>
+          <option value="年榜">年榜</option>
+          <option value="年榜">年榜</option>
+        </select>
+        <select class="select2" name="">
+          <option value="2017年">2017年</option>
+          <option value="2017年">2017年</option>
+          <option value="2017年">2017年</option>
+        </select>
+      </div>
+      <nav class="nav">
+        <table border="0" cellspacing="" cellpadding="">
+          <tr class="thead">
+            <th>名次</th>
+            <th>姓名</th>
+            <th>客户数</th>
+            <th>奖励</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>张三</td>
+            <td>439000</td>
+            <td>1000元</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>张三</td>
+            <td>439000</td>
+            <td>1000元</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>张三</td>
+            <td>439000</td>
+            <td>1000元</td>
+          </tr>
+        </table>
+      </nav>
+    </div>
+    <footer class="footer">
+      <a class="" href="#content1">分享</a>
+      <a class="" href="#content2">准入<br />查询</a>
+      <a href="#content3">积分<br />查询</a>
+      <a class="active" href="#content4">排行榜</a>
+    </footer>
+  </div>
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+  	var event = 'ontouchstart' in document.documentElement ? 'touchstart' : 'click';
+  	$('.footer>a').on(event, function () {
+  	    $(this).addClass('active').siblings().removeClass('active');
+  	})
+  </script>
+</body>
+</html>
+
