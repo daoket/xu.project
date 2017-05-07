@@ -32,7 +32,7 @@
   	  position: relative;
   	}
   	.app .footer{
-  	  height: 60px;
+  	  height: 50px;
   	  width: 100%;
   	  background-color: #2F0707;
   	  position: absolute;
@@ -50,7 +50,7 @@
   	  width: 25%;
   	  color: #FFFFFF;
   	  text-decoration: none;
-  	  font-size: 20px;
+  	  font-size: 16px;
   	  display: flex;
   	  display: -webkit-flex;
   	  justify-content: center;
@@ -88,39 +88,43 @@
    }
    .app .content2 .search{
      height: 40px;
+     position: relative;
    }
    .app .content2 .search select{
      width: 30%;
      height: 40px;
      font-size: 16px;
      text-indent: 5px;
-     border: 1px solid #EEEEEE;
+     border: none;
      background: url(img/down.png) no-repeat;
-     background-size: 25px 25px;
+     background-size: 20px 20px;
      background-color: #FFFFFF;
-     background-position: 85% 8px;
+     background-position: 85% 10px;
      appearance: none;
      -webkit-appearance: none;
-   }
-   .app .content2 .search select option{
-     text-indent: 10px;
    }
    .app .content2 .search input{
      width: 60%;
      height: 40px;
      font-size: 16px;
-     text-indent: 10px;
+     text-indent: 20px;
      outline: none;
+     border-radius: 20px;
      border: 1px solid #EEEEEE;
      appearance: none;
      -webkit-appearance: none;
      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
    }
-   .result{
+   .app .content2 .search .icon{
+   	position: absolute;
+   	top: 8px;
+   	right: 12%;
+   }
+   .app .content2 .result{
      margin-top: 10px;
      border-bottom: 1px solid #EEEEEE;
    }
-   .result li{
+   .app .content2 .result li{
      height: 40px;
      cursor: pointer;
      display: flex;
@@ -130,6 +134,9 @@
      align-items: center;
      -webkit-align-items: center;
      border-top: 1px solid #EEEEEE;
+   }
+   .app .content2 .result li:hover{
+   		background-color: #EEEEEE;
    }
    /*content4样式*/
   .content4{
@@ -145,9 +152,9 @@
     width: 100px;
     font-size: 16px;
     background: url(img/down.png) no-repeat;
-    background-size: 25px 25px;
+    background-size: 20px 20px;
     background-color: #FFFFFF;
-    background-position: 60px 4px;
+    background-position: 60px 6px;
     appearance: none;
     -webkit-appearance: none;
   }
@@ -196,6 +203,9 @@
           <option value="杭州市">杭州市</option>
         </select>
         <input type="text" placeholder="搜索公司名称"/>
+        <svg class="icon" aria-hidden="true" style="color: #EEEEEE;">
+			    <use xlink:href="#icon-search"></use>
+			  </svg>
       </div>
       <ul class="result">
       	<li>杭州xxx公司</li>
@@ -229,7 +239,7 @@
           </tr>
           <tr>
             <td>
-              <svg class="icon" aria-hidden="true">
+              <svg class="icon" aria-hidden="true" style="color: #F6C81E;">
                 <use xlink:href="#icon-diyiming"></use>
               </svg>
             </td>
@@ -239,7 +249,7 @@
           </tr>
           <tr>
             <td>
-              <svg class="icon" aria-hidden="true">
+              <svg class="icon" aria-hidden="true" style="color: #C6C6D3;">
                 <use xlink:href="#icon-dierming"></use>
               </svg>
             </td>
@@ -249,7 +259,7 @@
           </tr>
           <tr>
             <td>
-              <svg class="icon" aria-hidden="true">
+              <svg class="icon" aria-hidden="true" style="color: #DEC6C4;">
                 <use xlink:href="#icon-disanming"></use>
               </svg>
             </td>
