@@ -12,7 +12,15 @@
       
   <title>贷款</title>
   <link rel="stylesheet" type="text/css" href="css/main.css"/>
+  <!--图标字体-->
+  <script src="js/iconfont.js"></script>
   <style type="text/css">
+    .icon {
+       width: 1.6em; height: 1.6em;
+       vertical-align: -0.15em;
+       fill: currentColor;
+       overflow: hidden;
+    }
     /*公用样式*/
   	html, body{
   	  height: 100%;
@@ -86,6 +94,12 @@
      height: 40px;
      font-size: 16px;
      border: 1px solid #EEEEEE;
+     background: url(img/down.png) no-repeat;
+     background-size: 25px 25px;
+     background-color: #FFFFFF;
+     background-position: 85% 8px;
+     appearance: none;
+     -webkit-appearance: none;
    }
    .app .content2 .search input{
      width: 70%;
@@ -121,11 +135,17 @@
     height: 40px;
   }
   .content4 select{
-    height: 40px;
+    margin-top: 10px;
+    height: 30px;
     border: none;
-    outline: none;
     width: 100px;
     font-size: 16px;
+    background: url(img/down.png) no-repeat;
+    background-size: 25px 25px;
+    background-color: #FFFFFF;
+    background-position: 60px 4px;
+    appearance: none;
+    -webkit-appearance: none;
   }
   .content4 .select1{
     position: absolute;
@@ -149,6 +169,10 @@
     text-align: center;
   }
   .content4 .nav .thead{
+    color: #FFFFFF;
+    background-color: #DB402A;
+  }
+  .content4 .nav .thead:hover{
     color: #FFFFFF;
     background-color: #DB402A;
   }
@@ -200,19 +224,31 @@
             <th>奖励</th>
           </tr>
           <tr>
-            <td>1</td>
+            <td>
+              <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-diyiming"></use>
+              </svg>
+            </td>
             <td>张三</td>
             <td>439000</td>
             <td>1000元</td>
           </tr>
           <tr>
-            <td>1</td>
+            <td>
+              <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-dierming"></use>
+              </svg>
+            </td>
             <td>张三</td>
             <td>439000</td>
             <td>1000元</td>
           </tr>
           <tr>
-            <td>1</td>
+            <td>
+              <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-disanming"></use>
+              </svg>
+            </td>
             <td>张三</td>
             <td>439000</td>
             <td>1000元</td>
