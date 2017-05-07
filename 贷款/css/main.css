@@ -23,8 +23,8 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 h1,
@@ -33,32 +33,32 @@ h3,
 h4,
 h5,
 h6 {
-  font-size: 100%;
-  font-weight: normal;
+	font-size: 100%;
+	font-weight: normal;
 }
 
 ul {
-  list-style: none;
+	list-style: none;
 }
 
 button,
 input,
 select,
 textarea {
-  margin: 0;
+	margin: 0;
 }
 
 html {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 * {
-  box-sizing: inherit;
+	box-sizing: inherit;
 }
 
 *:before,
 *:after {
-  box-sizing: inherit;
+	box-sizing: inherit;
 }
 
 img,
@@ -66,21 +66,233 @@ embed,
 object,
 audio,
 video {
-  height: auto;
-  max-width: 100%;
+	height: auto;
+	max-width: 100%;
 }
 
 iframe {
-  border: 0;
+	border: 0;
 }
 
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
 td,
 th {
-  padding: 0;
-  text-align: left;
+	padding: 0;
+	text-align: left;
+}
+
+
+/*公用样式*/
+
+.icon {
+	width: 1.6em;
+	height: 1.6em;
+	vertical-align: -0.15em;
+	fill: currentColor;
+	overflow: hidden;
+}
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+}
+
+.app {
+	height: 100%;
+	width: 100%;
+	position: relative;
+}
+
+.app .footer {
+	height: 50px;
+	width: 100%;
+	background-color: #2F0707;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	display: -webkit-flex;
+	justify-content: space-around;
+	-webkit-justify-content: space-around;
+	align-items: center;
+	-webkit-align-items: center;
+}
+
+.app .footer a {
+	height: 100%;
+	width: 25%;
+	color: #FFFFFF;
+	text-decoration: none;
+	font-size: 16px;
+	display: flex;
+	display: -webkit-flex;
+	justify-content: center;
+	-webkit-justify-content: center;
+	align-items: center;
+	-webkit-align-items: center;
+}
+
+.app .footer a.active {
+	color: #2F0707;
+	background: linear-gradient(to bottom, #F7E627, #EE692E);
+	background: -webkit-linear-gradient(to bottom, #F7E627, #EE692E);
+}
+
+.content {
+	display: none;
+}
+
+.content:target {
+	display: block;
+}
+
+
+/*content1样式*/
+
+.app .content1 {
+	height: 100%;
+	width: 100%;
+	background: url(img/bg.png) no-repeat;
+	background-size: 100% 100%;
+}
+
+.app .content1 .qrcode {
+	width: 30%;
+	position: absolute;
+	left: 34%;
+	bottom: 25%;
+}
+
+
+/*content2 样式*/
+
+.app .content2 {
+	padding: 10px;
+}
+
+.app .content2 .search {
+	height: 40px;
+	position: relative;
+}
+
+.app .content2 .search select {
+	width: 30%;
+	height: 40px;
+	font-size: 16px;
+	text-indent: 5px;
+	border: none;
+	background: url(img/down.png) no-repeat;
+	background-size: 20px 20px;
+	background-color: #FFFFFF;
+	background-position: 85% 10px;
+	appearance: none;
+	-webkit-appearance: none;
+}
+
+.app .content2 .search input {
+	width: 60%;
+	height: 40px;
+	font-size: 16px;
+	text-indent: 20px;
+	outline: none;
+	border-radius: 20px;
+	border: 1px solid #EEEEEE;
+	appearance: none;
+	-webkit-appearance: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.app .content2 .search .icon {
+	position: absolute;
+	top: 8px;
+	right: 12%;
+}
+
+.app .content2 .result {
+	margin-top: 10px;
+	border-bottom: 1px solid #EEEEEE;
+}
+
+.app .content2 .result li {
+	height: 40px;
+	cursor: pointer;
+	display: flex;
+	display: -webkit-flex;
+	justify-content: flex-start;
+	-webkit-justify-content: flex-start;
+	align-items: center;
+	-webkit-align-items: center;
+	border-top: 1px solid #EEEEEE;
+}
+
+.app .content2 .result li:hover {
+	background-color: #EEEEEE;
+}
+
+
+/*content4样式*/
+
+.content4 {
+	position: relative;
+}
+
+.content4 .head {
+	height: 40px;
+}
+
+.content4 select {
+	height: 30px;
+	margin: 5px 0;
+	border: none;
+	width: 100px;
+	font-size: 16px;
+	background: url(img/down.png) no-repeat;
+	background-size: 20px 20px;
+	background-color: #FFFFFF;
+	background-position: 60px 6px;
+	appearance: none;
+	-webkit-appearance: none;
+}
+
+.content4 .select1 {
+	position: absolute;
+	left: 20%;
+}
+
+.content4 .select2 {
+	position: absolute;
+	right: 20%;
+}
+
+.content4 .nav table {
+	width: 100%;
+}
+
+.content4 .nav table tr {
+	height: 40px;
+}
+
+.content4 .nav table tr:hover {
+	background-color: #EEEEEE;
+}
+
+.content4 .nav table th,
+.content4 .nav table td {
+	cursor: pointer;
+	text-align: center;
+}
+
+.content4 .nav .thead {
+	color: #FFFFFF;
+	background-color: #DB402A;
+}
+
+.content4 .nav .thead:hover {
+	color: #FFFFFF;
+	background-color: #DB402A;
 }
