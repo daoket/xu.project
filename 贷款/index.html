@@ -105,49 +105,44 @@
   </div>
   <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript">
-	var event = 'ontouchstart' in document.documentElement ? 'touchstart' : 'click';
-	$('.footer>a').on(event, function () {
-	    $(this).addClass('active').siblings().removeClass('active');
-  });
-var dataUrl = 'js/data.js';
-askData(dataUrl);
-window.onscroll = function () {
-  var isBottom = document.body.scrollHeight - document.body.scrollTop - window.innerHeight;
-  if (isBottom < 1) {
-  	 askData(dataUrl);
-  }
-}
-function askData(url) {
-  // 异步请求数据
-  $.ajax({
-    type: "get",
-    url: url,
-    async: true,
-    success: function(res) {
-      var data = JSON.parse(res);
-      loadTable(data);
+  	var event = 'ontouchstart' in document.documentElement ? 'touchstart' : 'click';
+  	$('.footer>a').on(event, function () {
+  	    $(this).addClass('active').siblings().removeClass('active');
+    });
+    var dataUrl = 'js/data.js'; // 假数据
+    // 请求数据
+    askData(dataUrl);
+    // 滚动加载
+    window.onscroll = function () {
+      var isBottom = document.body.scrollHeight - document.body.scrollTop - window.innerHeight;
+      if (isBottom < 1) {
+      	 askData(dataUrl);
+      }
     }
-  });
-}
-
-function loadTable(data) {
-  //       var html = '<tr>' +
-  //          '<td><svg class="icon" aria-hidden="true" style="color: #DEC6C4;">' +
-  //          '<use xlink:href="#icon-disanming"></use></svg></td>' +
-  //          <'td>' + user.name + '</td>' +
-  //          '<td>' + user.count + '</td>' +
-  //          <'td>' + user.reward + '</td>' +
-  //        '</tr>';
-  for(var i in data) {
-    var html = '<tr>' +
-      '<td>' + (+i + 3) + '</td>' +
-      '<td>' + data[i].name + '</td>' +
-      '<td>' + data[i].count + '</td>' +
-      '<td>' + data[i].reward + '</td>' +
-      '</tr>';
-    $(html).appendTo('.userTable')
-  }
-}
+    // 异步请求函数
+    function askData(url) {
+      $.ajax({
+        type: "get",
+        url: url,
+        async: true,
+        success: function(res) {
+          var data = JSON.parse(res);
+          loadTable(data);
+        }
+      });
+    }
+    
+    function loadTable(data) {
+      for(var i in data) {
+        var html = '<tr>' +
+          '<td>' + (+i + 3) + '</td>' +
+          '<td>' + data[i].name + '</td>' +
+          '<td>' + data[i].count + '</td>' +
+          '<td>' + data[i].reward + '</td>' +
+          '</tr>';
+        $(html).appendTo('.userTable')
+      }
+    }
   </script>
 </body>
 </html>
